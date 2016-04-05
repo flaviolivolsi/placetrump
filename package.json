@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node ."
+  },
   "dependencies": {
     "ejs": "^2.4.1",
     "glue": "^3.2.0",
