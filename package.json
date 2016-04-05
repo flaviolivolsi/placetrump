@@ -1,9 +1,11 @@
 {
   "dependencies": {
+    "ejs": "^2.4.1",
     "glue": "^3.2.0",
     "hapi": "^13.3.0",
     "hapi-router": "^3.4.1",
     "inert": "^3.2.0",
-    "sharp": "^0.14.0"
+    "sharp": "^0.14.0",
+    "vision": "^4.1.0"
   }
 }

@@ -15,6 +15,8 @@ var manifest = {
     registrations : [{
         plugin : { register : 'inert' }
     }, {
+        plugin : { register : 'vision' }
+    }, {
         plugin : {
             register : 'hapi-router',
             options  : {
@@ -27,6 +29,12 @@ var manifest = {
 
 glue.compose(manifest, { relativeTo: __dirname }, function(error, server) {
     if (error) throw error;
+
+    server.views({
+        engines     : { ejs: require('ejs') },
+        relativeTo  : __dirname,
+        path        : 'views'
+    });
 
     server.start(function() {
         console.info('Server running at %s', server.info.uri);
