@@ -5,7 +5,7 @@ module.exports = [{
     method  : 'GET',
     path    : '/{param*}',
     handler : {
-        directory : { path : '.' }
+        directory : { path : 'public' }
     }
 
 }];

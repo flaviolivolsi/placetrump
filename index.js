@@ -8,7 +8,7 @@ var manifest = {
         port    : process.env.PORT || 5050,
         routes  : {
             files : {
-                relativeTo : path.join(__dirname, 'public')
+                relativeTo : __dirname
             }
         }
     }],
