@@ -18,8 +18,8 @@ var manifest = {
         plugin : {
             register : 'hapi-router',
             options  : {
-                cwd     : path.join(__dirname, 'api'),
-                routes  : '**/*.route.js'
+                cwd     : __dirname,
+                routes  : 'routes/**/*.route.js'
             }
         }
     }]
