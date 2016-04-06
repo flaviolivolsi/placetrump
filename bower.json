@@ -1,0 +1,22 @@
+{
+  "name": "placetrump",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Flavio Li Volsi <flavio.livolsi@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/flaviolivolsi/placetrump",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
