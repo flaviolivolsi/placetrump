@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="placetrump">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,14 +44,14 @@
         </div>
     </nav>
     
-    <div class="container">
+    <div class="container" data-ng-controller="MainCtrl">
         
         <div class="first-fold">
             <h1>The next-gen image placeholder generator.</h1>
         </div>
             
         <div class="second-fold">
-            <img src="/640/480" alt="Donald Trump placeholder">
+            <img data-ng-src="{{ imageUrl }}" alt="Donald Trump placeholder">
         </div>
         
     </div><!-- /.container -->
@@ -60,5 +60,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/lib/angular/angular.min.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
