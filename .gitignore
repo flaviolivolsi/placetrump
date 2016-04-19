@@ -34,3 +34,7 @@ node_modules
 
 # Bower lib directory
 public/lib
+
+# Images library
+images/*.jpg
+!images/sample.jpg
