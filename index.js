@@ -1,11 +1,16 @@
 'use strict';
 
-var glue = require('glue');
-var path = require('path');
+var glue    = require('glue');
+var path    = require('path');
+var config  = require('./config');
+var url     = require('url');
 
 var manifest = {
     connections : [{
-        port    : process.env.PORT || 5050,
+        port    : config.port,
+        host    : config.url && url.parse(config.url).host,
+        uri     : config.url,
+        address : '0.0.0.0',
         routes  : {
             files : {
                 relativeTo : __dirname
