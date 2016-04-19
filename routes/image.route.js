@@ -18,6 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
     setInterval(function() { images = loadImages(); }, 1000);
 }
 
+// Respond with correctly transformed random image
 function getImage(request, reply, options) {
     var key = _(options).values().unshift('img').compact().join('_');
     console.log('getImage: %s', key);
@@ -31,6 +32,8 @@ function getImage(request, reply, options) {
     reply(image).type('image/jpeg').etag(key).header('last-modified', lastModified);
 }
 
+// Set up path structure, like this - question mark meaning optional part:
+// /{width}/{height}/{category}?/<gray|bw>?/<blur>?
 module.exports = _.transform([null, 'cats'], function(routes, category) {
     _.each([null, 'gray', 'bw'], function(color) {
         _.each([null, 'blur'], function(blur) {
