@@ -19,7 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 function getImage(request, reply, options) {
-    var key = _(options).values().unshift('drumpf').compact().join('_');
+    var key = _(options).values().unshift('img').compact().join('_');
     console.log('getImage: %s', key);
 
     // load, scale and transform image
