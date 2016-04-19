@@ -24,3 +24,15 @@ Run!
 ```
 npm start
 ```
+
+## Image API
+
+Try some of the ways to get your perfect placeholder image:
+```
+/{width}/{height}
+/{width}/{height}/gray
+/{width}/{height}/bw
+/{width}/{height}/blur
+/{width}/{height}/gray/blur
+...
+```
