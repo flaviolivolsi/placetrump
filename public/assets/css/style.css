@@ -21,3 +21,11 @@ body {
 .first-fold img {
     margin: 3rem 0;
 }
+
+.faq p {
+    text-align: center;
+    margin: 2em 0;
+    font-size: 2vw;
+    padding: 1em;
+    border: 3px dashed #B3EAF3;
+}
