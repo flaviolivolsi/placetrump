@@ -29,3 +29,14 @@ body {
     padding: 1em;
     border: 3px dashed #B3EAF3;
 }
+
+footer {
+    background-color: #1B1B1B;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
