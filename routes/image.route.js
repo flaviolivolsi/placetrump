@@ -4,18 +4,26 @@ var _       = require('lodash');
 var joi     = require('joi');
 var sharp   = require('sharp');
 var path    = require('path');
+var glob    = require('glob');
 var fs      = require('fs');
-var images  = path.join(__dirname, '../images');
+var images  = loadImages();
 
 var lastModified = new Date(2016, 3, 5, 2).toUTCString(); // "not modified" since project start
+
+// Load list of images, dynamically updated when developing
+function loadImages() {
+    return glob.sync('**/*.jpg', { cwd : path.join(__dirname, '../images'), realpath : true });
+}
+if (process.env.NODE_ENV !== 'production') {
+    setInterval(function() { images = loadImages(); }, 1000);
+}
 
 function getImage(request, reply, options) {
     var key = _(options).values().unshift('drumpf').compact().join('_');
     console.log('getImage: %s', key);
 
     // load, scale and transform image
-    var files = fs.readdirSync(images);
-    var image = sharp(path.join(images, _.sample(files))).resize(options.width, options.height);
+    var image = sharp(_.sample(images)).resize(options.width, options.height);
     if (options.color === 'gray')   image = image.grayscale();
     if (options.color === 'bw')     image = image.threshold(130);
     if (options.blur)               image = image.blur(15);
