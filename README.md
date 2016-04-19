@@ -10,12 +10,9 @@ A scary image placeholder platform using Donald Trump images.
 
 Install the dependencies:
 ```
-npm install
-```
-
-Install Gulp:
-```
 npm install -g gulp
+npm install
+bower install
 ```
 
 Download some Donald Trump images:
