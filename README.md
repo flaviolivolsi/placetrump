@@ -1,5 +1,5 @@
 # placetrump
-A scary image placeholder platform using Donald Trump images.
+A scary placeholder image platform using Donald Trump images.
 
 ## Requirements
 
